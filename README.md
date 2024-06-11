@@ -1,46 +1,21 @@
+# MyCoin Solidity Contract
 
-# MyCoin Smart Contract
+## Overview:
+The "MyCoin" Solidity program is like a blueprint for creating digital tokens on the Ethereum blockchain. It's designed to help beginners understand how tokens work in the world of blockchain technology. With functions to create, add, and remove tokens, this contract offers a beginner-friendly way to learn about programming smart contracts.
 
-Welcome to the MyCoin smart contract repository, developed as part of a Solidity assignment for the MetaCrafters project. MyCoin is a straightforward simple token crafted in Solidity, featuring essential functions such as token creation, minting, and burning.
+## Getting Started:
+To use this program, you'll need Remix, an online tool for writing and testing code. Visit https://remix.ethereum.org/ and create a new file called "MyCoin.sol." Copy and paste the code provided. Then, click the "Compile" button to make sure everything is set up correctly. Once it's compiled, you can deploy the contract and start using it.
 
-## Key Features of my project
+## Working:
+Once the contract is deployed, you can interact with it using the "mint" and "burn" functions. "Minting" is like making new tokens and adding them to someone's account. "Burning" is like removing tokens from an account. Make sure to enter the right details when you use these functions. You can also check how many tokens someone has by looking at their balance.
 
-- **Token Information**: Easily store and retrieve the token's name, abbreviation, and total supply.
-- **Balance Tracking**: Monitor the balances of various addresses.
-- **Minting**: Increase the total supply and the balance of a specific address.
-- **Burning**: Reduce the total supply and the balance of a specific address.
+## Code Explanation:
 
-## Contract Overview
+1. I set up some basic information storage for our coin, like its name, abbreviation, and total supply.
+2. Then, I created a system to keep track of who owns how many tokens using a mapping structure.
+3. To add new tokens into the system, I made a function called mint. This function takes in an address and a value, increasing the total supply by that amount and giving those tokens to the sender.
+4. I also made a function called burn, which does the opposite of mint. It takes in an address and a value, reducing the total supply by that amount and removing those tokens from the sender's balance.
+5. To make sure everything runs smoothly and securely, I included some checks in the burn function. These checks make sure that the sender actually has enough tokens to burn before going ahead with it.
 
-### Variables
-
-- **coinName**: The token's name.
-- **coinAbbrv**: The token's abbreviation.
-- **totalSupply**: The total supply of the token.
-- **balances**: A mapping that keeps track of each address's token balance.
-
-### Constructor
-
-The constructor sets up the token with a name, abbreviation, and initial supply, assigning the initial supply to the contract deployer.
-
-### Functions
-
-- **mint(address _address, uint256 _amount)**: Mints new tokens, boosting the total supply and the balance of the specified address.
-- **burn(address _address, uint256 _amount)**: Burns tokens from the specified address, lowering the total supply and the address's balance.
-
-## How to Deploy
-
-1. Open [Remix IDE](https://remix.ethereum.org/) or your preferred Solidity development environment.
-2. Write the MyCoin contract code into a new Solidity file.
-3. Compile the contract.
-4. Deploy the contract on your chosen Ethereum network (e.g., Mainnet, Ropsten, Rinkeby) with the necessary parameters (`_name`, `_abbrv`, `_initialSupply`).
-
-## How to Interact
-
-- **Minting Tokens**: Use `myCoin.mint(address, amount);` to create new tokens.
-- **Burning Tokens**: Use `myCoin.burn(address, amount);` to destroy existing tokens.
-- **Checking Balances**: Check an address's balance with `uint256 balance = myCoin.balances(address);`.
-
-## License
-
-This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
+## Author:
+Shashwat Singh
